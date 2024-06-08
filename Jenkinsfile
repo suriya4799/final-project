@@ -28,7 +28,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    dockerImage.run('-p 3000:3000')
+                    sh 'sudo docker run -itd --name My-project-con -p 3000:3000 suriya4799/final-project:v1'
                 }
             }
         }
