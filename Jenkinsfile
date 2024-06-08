@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url:'https://github.com/suriya4799/php-project', branch: "master"
+                git url:'https://github.com/suriya4799/final-project', branch: "master"
             }
         }
         stage('Build Docker Image') {
@@ -28,7 +28,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    sh 'sudo docker run -itd --name My-final-project-conta -p 8090:80 suriya4799/final-project:v1'
+                    sh 'sudo docker run -itd --name My-final-project-container -p 8090:80 suriya4799/final-project:v1'
                 }
             }
         }
