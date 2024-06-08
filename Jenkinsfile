@@ -28,7 +28,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    sh 'sudo docker run -itd --name My-final-project-con -p 8089:80 suriya4799/final-project:v1'
+                    sh 'sudo docker run -itd --name My-final-project-con1 -p 8089:80 suriya4799/final-project:v1'
                 }
             }
         }
